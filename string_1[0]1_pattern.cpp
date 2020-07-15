@@ -17,18 +17,18 @@ Constraints:
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-string s;
-cin>>s;
-int count=0;
-char last=s[0];
-for(int i=1;i<s.length();i++){
-if(s[i]=='0'&&last=='1'){
-while(s[i]=='0'&&i<s.length())
-i++;
-if(i<s.length()&&s[i]=='1')
-count++;
+  string s;
+  cin>>s;
+  int count=0;
+  char last=s[0];
+  for(int i=1;i<s.length();i++){
+      if(s[i]=='0'&&last=='1'){
+           while(s[i]=='0'&&i<s.length())
+                 i++;
+           if(i<s.length()&&s[i]=='1')
+                  count++;
+        }
+       last=s[i];
 }
-last=s[i];
-}
-cout<<count<<endl;
+   cout<<count<<endl;
 }
